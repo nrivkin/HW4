@@ -1,0 +1,7 @@
+Computer Architecture HW4 Report
+Noah Rivkin
+
+Deliverable 1 is in a separate file.
+Deliverables 2-5 are code modules, and are in regfile.v
+Deliverable 6:
+    The decoder is a 1-hot decoder. It has 32 outputs, each of which goes to one of the registers. The outputs are numbered 0-31, and each connects to the write enable of the register of the same number. The verilog works by starting with the input to the enable port as the LSB of the output. It then shifts the bit to the right by the address number. The enable bit is then sent to the register with the number of the address. If enable is high, then the register at the address is write enabled. All other wires are low, to the registers they connect to are not write enabled.
